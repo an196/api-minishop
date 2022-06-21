@@ -8,3 +8,13 @@ content-type: application/json
     "email": "admin@gmail.com",
     "password": "admin"
 }
+
+###
+
+POST  http://localhost:8080/auth
+content-type: application/json
+
+{
+    "email": "admin@gmail.com",
+    "password": "admin"
+}

@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const app = express();
 const cors = require('cors');
@@ -10,7 +11,7 @@ const credentials = require('./middleware/credentials');
 const mongoose = require('mongoose');
 const connectDB = require('./config/dbConnection');
 
-require('dotenv').config();
+
 const PORT = process.env.PORT || 3500;
 
 // Connect to MongoDB
