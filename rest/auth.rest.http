@@ -1,0 +1,31 @@
+###
+
+POST  http://localhost:8080/register
+content-type: application/json
+
+{
+    "username": "admin",
+    "email": "admin@gmail.com",
+    "password": "admin"
+}
+
+### login
+
+POST  http://localhost:8080/auth
+content-type: application/json
+
+{
+    "email": "admin@gmail.com",
+    "password": "admin"
+}
+
+###
+
+POST  http://localhost:8080/logout
+content-type: application/json
+set-cookie: jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNjU1ODE2NzI5LCJleHAiOjE2NTU4MTY3NDR9.eTrl7Ox0jX2WLhsyf8C4vbgM5uy7izlD-pfHOXrZKw8; Max-Age=86400; Path=/; Expires=Wed, 22 Jun 2022 13:05:29 GMT; HttpOnly; Secure; SameSite=None
+
+{
+    "email": "admin@gmail.com",
+    "password": "admin"
+}
