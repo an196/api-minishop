@@ -10,7 +10,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySW5mbyI6eyJ1c
 POST   http://localhost:8080/employees
 content-type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySW5mbyI6eyJ1c2VybmFtZSI6ImFkbWluIiwicm9sZXMiOlsyMDAxXX0sImlhdCI6MTY1NTkxMTUzMSwiZXhwIjoxNjU1OTExNTQxfQ.IkhdLD4NnlRMqSN1TGmTQxHROe13g6sIdGePw1dWa-I
-
+s
 {
     "employeeID": 1,
     "name": "Nancy Davolio",
@@ -27,3 +27,52 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySW5mbyI6eyJ1c
 DELETE    http://localhost:8080/employees/
 content-type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySW5mbyI6eyJ1c2VybmFtZSI6ImFkbWluIiwicm9sZXMiOlsyMDAxXX0sImlhdCI6MTY1NTkwODk1NCwiZXhwIjoxNjU1OTA4OTY0fQ.ssRkn8xMgXjWElw2xeYQjVx6lFuesYwre9BFCQ8YFG4
+
+
+### add a employee
+
+POST   http://localhost:8080/employees
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySW5mbyI6eyJ1c2VybmFtZSI6ImFkbWluIiwicm9sZXMiOlsyMDAxXX0sImlhdCI6MTY1NTk1ODE2NCwiZXhwIjoxNjU1OTU4MTc0fQ.WIYyOXbl6TJ1jzIp3KK-ep21Ulf-K7UdbyQe0fThDSY
+
+{
+    "employeeID": 2,
+    "name": "Nasimiyu Danai",
+    "email": "Nasimiyu@gmail.com",
+    "imgProfile": "https://firebasestorage.googleapis.com/v0/b/minishop-b3604.appspot.com/o/avatar2.jpg?alt=media&token=9f5e7768-b98f-447c-bfbd-280ae9cda53a",
+    "country":  "Thailand",
+    "hireDate": "2021/12/01",
+    "reportTo": "Admin"
+}    
+
+### add a employee
+
+POST   http://localhost:8080/employees
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySW5mbyI6eyJ1c2VybmFtZSI6ImFkbWluIiwicm9sZXMiOlsyMDAxXX0sImlhdCI6MTY1NTk1ODE2NCwiZXhwIjoxNjU1OTU4MTc0fQ.WIYyOXbl6TJ1jzIp3KK-ep21Ulf-K7UdbyQe0fThDSY
+
+{
+    "employeeID": 3,
+    "name": "Iulia Albu",
+    "email": "Iulia@gmail.com",
+    "imgProfile": "https://firebasestorage.googleapis.com/v0/b/minishop-b3604.appspot.com/o/avatar3.png?alt=media&token=57d6d2f7-25c2-417b-b166-6acce8e3c390",
+    "country":  "America",
+    "hireDate": "2021/12/01",
+    "reportTo": "Admin"
+}    
+
+### add a employee
+
+POST   http://localhost:8080/employees
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySW5mbyI6eyJ1c2VybmFtZSI6ImFkbWluIiwicm9sZXMiOlsyMDAxXX0sImlhdCI6MTY1NTkxMTUzMSwiZXhwIjoxNjU1OTExNTQxfQ.IkhdLD4NnlRMqSN1TGmTQxHROe13g6sIdGePw1dWa-I
+
+{
+    "employeeID": 4,
+    "name": "Siegbert Gottfried",
+    "email": "Siegbert@gmail.com",
+    "imgProfile": "https://firebasestorage.googleapis.com/v0/b/minishop-b3604.appspot.com/o/avatar4.jpg?alt=media&token=952e4b53-214c-4112-8395-c755ab94f96e",
+    "country":  "French",
+    "hireDate": "2021/12/01",
+    "reportTo": "Admin"
+}    

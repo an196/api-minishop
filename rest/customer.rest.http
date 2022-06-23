@@ -1,0 +1,29 @@
+### get a customer
+
+GET   http://localhost:8080/customers
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySW5mbyI6eyJ1c2VybmFtZSI6ImFkbWluIiwicm9sZXMiOlsyMDAxXX0sImlhdCI6MTY1NTkwODk1NCwiZXhwIjoxNjU1OTA4OTY0fQ.ssRkn8xMgXjWElw2xeYQjVx6lFuesYwre9BFCQ8YFG4
+
+### add a customer
+
+POST   http://localhost:8080/customers
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySW5mbyI6eyJ1c2VybmFtZSI6ImFkbWluIiwicm9sZXMiOlsyMDAxXX0sImlhdCI6MTY1NTkxMTUzMSwiZXhwIjoxNjU1OTExNTQxfQ.IkhdLD4NnlRMqSN1TGmTQxHROe13g6sIdGePw1dWa-I
+
+{
+    "customerID": 3,
+    "name": "Nirav Joshi",
+    "email": "nirav@gmail.com",
+    "imgProfile": "https://firebasestorage.googleapis.com/v0/b/minishop-b3604.appspot.com/o/avatar.jpg?alt=media&token=34804fd3-dcdf-4c38-abb1-fd36fc7132b0",
+    "country":  "Viet Nam",
+    "joinDate": "2021/12/01",
+    "lastAccessAt": "2021/12/01",
+    "consume": 9000
+}    
+
+
+### delete a customer
+
+DELETE    http://localhost:8080/customers/
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySW5mbyI6eyJ1c2VybmFtZSI6ImFkbWluIiwicm9sZXMiOlsyMDAxXX0sImlhdCI6MTY1NTkwODk1NCwiZXhwIjoxNjU1OTA4OTY0fQ.ssRkn8xMgXjWElw2xeYQjVx6lFuesYwre9BFCQ8YFG4
