@@ -30,7 +30,7 @@ const customerSchema = new Schema({
         type: Date,
         required: false
     },
-    consume:{
+    totalBill:{
         type: Number,
         default: 0,
         required: false

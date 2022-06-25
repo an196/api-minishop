@@ -17,13 +17,16 @@ const addEmployee = async (req, res) => {
 };
 
 const deleteEmployee = async (req, res) => {
-    try {
-        await Employee.findByIdAndDelete(req.params.id);
-        res.status(200).json('Employee has been deleted...');
-    } catch (err) {
-        res.status(500).json(err);
+    if (!req?.body?._id) return res.status(400).json({ 'message': 'Employee ID required.' });
+
+    const employee = await Employee.findOne({ _id: req.body._id }).exec();
+    if (!employee) {
+        return res.status(204).json({ "message": `No employee matches ID ${req.body._id}.` });
     }
-};
+    const result = await employee.deleteOne(); //{ _id: req.body.id }
+    res.json(result);
+}
+
 module.exports = {
     getAllEmployees,
     addEmployee,

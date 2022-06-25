@@ -1,7 +1,7 @@
 const Customer = require('../models/Customer');
 
 const getCustomers = async (req, res) => {
-    const customers = await Employee.find();
+    const customers = await Customer.find();
     if (!customers) return res.status(204).json({ message: 'No customers found' });
     res.json(customers);
 };
