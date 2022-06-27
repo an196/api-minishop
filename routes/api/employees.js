@@ -8,6 +8,7 @@ router.route('/')
     .get(employeeController.getAllEmployees)
     .post(employeeController.addEmployee)
     .delete(employeeController.deleteEmployee)
+    .post(employeeController.updateEmployee)
     //.get(verifyRoles(ROLES_LIST.Admin), usersController.getAllUsers)
     // .delete(verifyRoles(ROLES_LIST.Admin), usersController.deleteUser);
 
