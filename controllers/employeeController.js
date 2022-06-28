@@ -30,18 +30,32 @@ const deleteEmployee = async (req, res) => {
 }
 
 const updateEmployee = async (req, res) => {
-    if (!req?.body?.id) {
+    
+    if (!req?.params?.id) {
+       
         return res.status(400).json({ 'message': 'ID parameter is required.' });
     }
-
-    const employee = await Employee.findOne({ _id: req.body.id }).exec();
+   
+    const employee = await Employee.findOne({ _id: req.params.id }).exec();
     if (!employee) {
-        return res.status(204).json({ "message": `No employee matches ID ${req.body.id}.` });
+        return res.status(204).json({ "message": `No employee matches ID ${req.params.id}.` });
     }
-    if (req.body?.firstname) employee.firstname = req.body.firstname;
-    if (req.body?.lastname) employee.lastname = req.body.lastname;
-    const result = await employee.save();
-    res.json(result);
+
+   
+    try {
+        employee.name = req.body.name;
+        employee.email = req.body.email;
+        employee.imgProfile = req.body.imgProfile;
+        employee.country = req.body.country;
+        employee.hireDate = req.body.hireDate;
+        employee.reportTo = req.body.reportTo;
+        employee.roles = req.body.roles;
+        
+        const result = await employee.save();
+        res.status(200).json(result);
+    } catch (error) {
+        res.status(500).json(error);
+    }
 }
 
 module.exports = {

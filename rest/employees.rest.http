@@ -21,6 +21,26 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySW5mbyI6eyJ1c
     "reportTo": "Admin"
 }    
 
+### update a employee
+
+PUT   http://localhost:8080/employees/62b915d87440dd6e6acf61a1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySW5mbyI6eyJ1c2VybmFtZSI6ImFkbWluIiwicm9sZXMiOlsyMDAxXX0sImlhdCI6MTY1NTkxMTUzMSwiZXhwIjoxNjU1OTExNTQxfQ.IkhdLD4NnlRMqSN1TGmTQxHROe13g6sIdGePw1dWa-I
+
+{
+    "_id": "62b915d87440dd6e6acf61a1",
+    "roles": {
+        "Employee": 1000
+    },
+    "employeeID": 11,
+    "name": "Nancy Davolio 1",
+    "email": "Nancy@gmail.com",
+    "imgProfile": "https://firebasestorage.googleapis.com/v0/b/minishop-b3604.appspot.com/o/avatar.jpg?alt=media&token=34804fd3-dcdf-4c38-abb1-fd36fc7132b0",
+    "country":  "Viet Nam",
+    "hireDate": "2021-11-30T17:00:00.000Z",
+    "reportTo": "Manage 1",
+    "__v": 0
+}    
 
 ### delete a employee
 
@@ -44,7 +64,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySW5mbyI6eyJ1c
     "email": "Nasimiyu@gmail.com",
     "imgProfile": "https://firebasestorage.googleapis.com/v0/b/minishop-b3604.appspot.com/o/avatar2.jpg?alt=media&token=9f5e7768-b98f-447c-bfbd-280ae9cda53a",
     "country":  "Thailand",
-    "hireDate": "2021/12/01",
+    "hireDate": "2021/12/25",
     "reportTo": "Admin"
 }    
 
