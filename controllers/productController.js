@@ -16,8 +16,19 @@ const addProduct = async (req, res) => {
     }
 };
 
+const getProduct = async (req, res) => {
+    console.log(req?.params)
+    if (!req?.params?.id) return res.status(400).json({ "message": 'Product ID required' });
+    const product = await Product.findOne({ _id: req.params.id }).exec();
+    if (!product) {
+        return res.status(204).json({ 'message': `Product ID ${req.params.id} not found` });
+    }
+    res.status(200).json(product);
+}
+
 
 module.exports = {
     getProducts,
-    addProduct
+    addProduct,
+    getProduct
 };

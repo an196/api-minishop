@@ -1,7 +1,13 @@
-### get a default product
+### get all products
 
 GET   http://localhost:8080/products
 content-type: application/json 
+
+### get a product
+
+GET   http://localhost:8080/products/62c271e3e34d91efd81e4082
+content-type: application/json 
+
 
 ### add a default product
 
@@ -15,7 +21,7 @@ content-type: application/json
       "https://firebasestorage.googleapis.com/v0/b/minishop-b3604.appspot.com/o/products%2Fearphones_a_3.webp?alt=media&token=d82bc596-8772-412f-a8b9-3f8a8ef14279",
       "https://firebasestorage.googleapis.com/v0/b/minishop-b3604.appspot.com/o/products%2Fearphones_a_4.webp?alt=media&token=dd3ee387-f324-4ee2-b432-eeccdacc1063"
     ],
-    "name": "Shop Now",
+    "name": "Earphone",
     "price": "100",
     "details": "Products with electrical plugs are designed for use in the US. Outlets and voltage differ internationally and this product may require an adapter or converter for use in your destination. Please check compatibility before purchasing"
 }

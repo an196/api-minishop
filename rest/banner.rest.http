@@ -17,5 +17,23 @@ content-type: application/json
     "largeText1": "FINE",
     "largeText2": "AMAZING",
     "discount": "10% OFF",
-    "saleTime": "2021/12/01"
+    "saleTime": "Mon Jul 04 2022 15:08:32 GMT+0700"
+}
+
+### update a default banner
+
+PATCH    http://localhost:8080/banners/default
+content-type: application/json
+
+{
+     "_id": "62c261d7c93acdd62b7d4bb5",
+    "image": "https://firebasestorage.googleapis.com/v0/b/minishop-b3604.appspot.com/o/banner%2Fbanner.webp?alt=media&token=680dab34-a734-4003-b038-5306a79e6961",
+    "buttonText": "Shop Now",
+    "desc": "Best headphone on the market",
+    "smallText": "Beats solo air",
+    "middleText": "Summer Sale",
+    "largeText1": "FINE",
+    "largeText2": "AMAZING",
+    "discount": "10% OFF",
+    "saleTime": "Mon Jul 04 2022 15:08:32 GMT+0700"
 }
