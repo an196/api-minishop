@@ -1,0 +1,21 @@
+### get a default product
+
+GET   http://localhost:8080/products
+content-type: application/json 
+
+### add a default product
+
+POST   http://localhost:8080/products
+content-type: application/json
+
+{
+    "image": [
+      "https://firebasestorage.googleapis.com/v0/b/minishop-b3604.appspot.com/o/products%2Fearphones_a_1.webp?alt=media&token=201de199-746b-4929-af6d-d4a3f765312c",
+      "https://firebasestorage.googleapis.com/v0/b/minishop-b3604.appspot.com/o/products%2Fearphones_a_2.webp?alt=media&token=e2f2951b-f6bd-474a-84d1-5cb12f86857e",    
+      "https://firebasestorage.googleapis.com/v0/b/minishop-b3604.appspot.com/o/products%2Fearphones_a_3.webp?alt=media&token=d82bc596-8772-412f-a8b9-3f8a8ef14279",
+      "https://firebasestorage.googleapis.com/v0/b/minishop-b3604.appspot.com/o/products%2Fearphones_a_4.webp?alt=media&token=dd3ee387-f324-4ee2-b432-eeccdacc1063"
+    ],
+    "name": "Shop Now",
+    "price": "100",
+    "details": "Products with electrical plugs are designed for use in the US. Outlets and voltage differ internationally and this product may require an adapter or converter for use in your destination. Please check compatibility before purchasing"
+}
