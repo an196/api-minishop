@@ -37,6 +37,9 @@ const bannerSchema = new Schema({
     saleTime:{
         type: Date,
         require: true,
+    },
+    updateAt:{
+        type: Date,
     }
 })
 

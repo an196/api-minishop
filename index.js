@@ -45,6 +45,8 @@ app.use('/employees', require('./routes/api/employees'));
 app.use('/customers', require('./routes/api/customers'));
 app.use('/banners', require('./routes/api/banners'));
 app.use('/products', require('./routes/api/products'));
+app.use('/categories', require('./routes/api/categories'));
+app.use('/orders', require('./routes/api/orders'));
 
 app.use(verifyJWT);
 app.use('/users', require('./routes/api/users'));

@@ -1,0 +1,22 @@
+### get a default category
+
+GET   http://localhost:8080/categories
+content-type: application/json 
+
+### add a  category
+
+POST   http://localhost:8080/categories
+content-type: application/json
+
+{
+    "name": "Watch 2"
+}
+
+### delete a category
+
+DELETE    http://localhost:8080/categories
+content-type: application/json
+
+{
+    "id" : "62c70a924df41f5f5f82e1a8"
+}

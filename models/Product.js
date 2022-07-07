@@ -18,6 +18,19 @@ const productSchema = new Schema({
         type: String,
         require: true
     },
+    goodsReceipts: {
+        type: String,
+    },
+    goodsID: {
+        type: String,
+    },
+    category: {
+        type: String,
+    },
+    amount: {
+        type: Number,
+        default: 0,
+    },
 })
 
 module.exports = mongoose.model('Product', productSchema);
