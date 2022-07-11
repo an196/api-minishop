@@ -91,7 +91,6 @@ content-type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySW5mbyI6eyJ1c2VybmFtZSI6ImFkbWluIiwicm9sZXMiOlsyMDAxXX0sImlhdCI6MTY1NTkxMTUzMSwiZXhwIjoxNjU1OTExNTQxfQ.IkhdLD4NnlRMqSN1TGmTQxHROe13g6sIdGePw1dWa-I
 
 {
-    "employeeID": 4,
     "name": "Siegbert Gottfried",
     "email": "Siegbert@gmail.com",
     "imgProfile": "https://firebasestorage.googleapis.com/v0/b/minishop-b3604.appspot.com/o/avatar4.jpg?alt=media&token=952e4b53-214c-4112-8395-c755ab94f96e",

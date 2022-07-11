@@ -11,7 +11,4 @@ router.route('/')
 
 router.route('/:id')
     .put(employeeController.updateEmployee)
-    //.get(verifyRoles(ROLES_LIST.Admin), usersController.getAllUsers)
-    // .delete(verifyRoles(ROLES_LIST.Admin), usersController.deleteUser);
-
 module.exports = router;
