@@ -10,7 +10,7 @@ const addEmployee = async (req, res) => {
     const lastRecord = await Employee.find().sort({field: 'asc', employeeID: -1}).limit(1);
     
     const newID = lastRecord[0] ? lastRecord[0].employeeID + 1 : 1;
-    const newEmployee = new Employee({...req.body, employeeID: newID});
+    const newEmployee = new Employee({employeeID: newID, ...req.body});
     try {
         const savedEmployee = await newEmployee.save();
         res.status(200).json(savedEmployee);

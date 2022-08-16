@@ -22,7 +22,7 @@ content-type: application/json
 
 ### update a default banner
 
-PATCH    http://localhost:8080/banners/default
+PATCH    http://localhost:8080/banners/default/62cfca3b5a6ad4f36e4665e1
 content-type: application/json
 
 {
@@ -34,6 +34,6 @@ content-type: application/json
     "middleText": "Summer Sale",
     "largeText1": "FINE",
     "largeText2": "AMAZING",
-    "discount": "10% OFF",
+    "discount": "20% OFF",
     "saleTime": "Mon Jul 04 2022 15:08:32 GMT+0700"
 }

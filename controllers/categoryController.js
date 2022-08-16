@@ -7,9 +7,9 @@ const getCategories = async (req, res) => {
 };
 
 const addCategory = async (req, res) => {
-    const lastCategory = await Category.find().sort({ field: 'asc', _id: -1}).limit(1);
-    
-    const newCategory = new Category({ code:lastCategory[0].code + 1, name: req.body.name});
+    const lastCategory = await Category.find().sort({ field: 'asc', code: -1}).limit(1);
+    const newCode = lastCategory[0] ? lastCategory[0].code + 1 : 1;
+    const newCategory = new Category({ code:newCode, ...req.body});
    
     try {
         const savedCategory = await newCategory.save();

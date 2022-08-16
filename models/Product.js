@@ -2,6 +2,10 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const productSchema = new Schema({
+    goodsID: {
+        type: Number,
+        reqiured: true
+    },
     image: [{
         type: String,
         require: true
@@ -21,11 +25,8 @@ const productSchema = new Schema({
     goodsReceipts: {
         type: String,
     },
-    goodsID: {
-        type: String,
-    },
     category: {
-        type: String,
+        type: Number,
     },
     amount: {
         type: Number,

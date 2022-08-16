@@ -7,28 +7,77 @@ const getProducts = async (req, res) => {
 };
 
 const addProduct = async (req, res) => {
-    const newProduct = new Product(req.body);
-    try {
-        const savedProduct = await newProduct.save();
-        res.status(200).join(savedProduct);
-    } catch (err) {
-        res.status(500).join(err);
-    }
+    const lastRecord = await Product.find().sort({ field: 'asc', goodsID: -1 }).limit(1);
+
+    const newID = lastRecord[0] ? lastRecord[0].goodsID + 1 : 1;
+    const newProduct = new Product({ goodsID: newID, ...req.body });
+
+    newProduct
+        .save()
+        .then(
+            (data) => res.status(200).json(data),
+            (err) => res.status(500).join(err),
+        )
+        .catch((err) => {
+            res.status(500).join(err);
+        });
 };
 
 const getProduct = async (req, res) => {
-    console.log(req?.params)
-    if (!req?.params?.id) return res.status(400).json({ "message": 'Product ID required' });
-    const product = await Product.findOne({ _id: req.params.id }).exec();
-    if (!product) {
-        return res.status(204).json({ 'message': `Product ID ${req.params.id} not found` });
-    }
-    res.status(200).json(product);
-}
+    if (!req?.params?.id) return res.status(400).json({ message: 'Product ID required' });
+    Product.findOne({ _id: req.params.id })
+        .exec()
+        .then(
+            (result) => res.status(200).json(result),
+            (err) => res.status(204).json({ message: `Product ID ${req.params.id} not found` }),
+        )
+        .catch((err) => res.status(204).json({ message: `Product ID ${req.params.id} not found` }));
+};
 
+const updateProduct = async (req, res) => {
+    if (!req?.params?.id) {
+        return res.status(400).json({ message: 'ID parameter is required.' });
+    }
+
+    Product.findOne({ _id: req.params.id })
+        .exec()
+        .then(
+            (result) => res.status(200).json(result),
+            (err) => res.status(204).json({ message: `Product ID ${req.params.id} not found` }),
+        )
+        .catch((err) => res.status(204).json({ message: `Product ID ${req.params.id} not found` }));
+
+    try {
+        product.name = req.body.name;
+        product.image = req.body.image;
+        product.price = req.body.price;
+        product.details = req.body.details;
+        product.goodsReceipts = req.body.goodsReceipts;
+        product.category = req.body.category;
+        product.amount = req.body.amount;
+
+        const result = await product.save();
+        res.status(200).json(result);
+    } catch (error) {
+        res.status(500).json(error);
+    }
+};
+
+const deleteProduct = async (req, res) => {
+    if (!req?.body?.id) return res.status(400).json({ message: 'Product ID required.' });
+
+    const product = await Product.findOne({ _id: req.body.id }).exec();
+    if (!product) {
+        return res.status(204).json({ message: `No product matches ID ${req.body.id}.` });
+    }
+    const result = await product.deleteOne(); //{ _id: req.body.id }
+    res.status(200).json(result);
+};
 
 module.exports = {
     getProducts,
     addProduct,
-    getProduct
+    getProduct,
+    deleteProduct,
+    updateProduct,
 };
