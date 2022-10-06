@@ -1,0 +1,21 @@
+### register admin account
+
+POST  http://localhost:8080/register
+content-type: application/json
+
+{
+    "username": "admin",
+    "email": "admin@gmail.com",
+    "password": "admin"
+}    
+
+### add a account
+
+POST  http://localhost:8080/register
+content-type: application/json
+
+{
+    "username": "anle1994",
+    "email": "anle1994@gmail.com",
+    "password": "matkhau"
+}  

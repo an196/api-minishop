@@ -9,6 +9,18 @@ GET   http://localhost:8080/products/62d619c1810aafc7a7edcfc8
 content-type: application/json 
 
 
+### get products by name
+
+GET   http://localhost:8080/products/search?p=headphone
+content-type: application/json 
+
+
+### get products by category
+
+GET   http://localhost:8080/products/category/1
+content-type: application/json 
+
+
 ### add a default product
 
 POST   http://localhost:8080/products

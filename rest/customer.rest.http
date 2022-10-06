@@ -11,9 +11,10 @@ content-type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySW5mbyI6eyJ1c2VybmFtZSI6ImFkbWluIiwicm9sZXMiOlsyMDAxXX0sImlhdCI6MTY1NTkxMTUzMSwiZXhwIjoxNjU1OTExNTQxfQ.IkhdLD4NnlRMqSN1TGmTQxHROe13g6sIdGePw1dWa-I
 
 {
-    "customerID": 3,
+    "customerID": 2,
     "name": "Nirav Joshi",
     "email": "nirav@gmail.com",
+    "password": "11111111",
     "imgProfile": "https://firebasestorage.googleapis.com/v0/b/minishop-b3604.appspot.com/o/avatar.jpg?alt=media&token=34804fd3-dcdf-4c38-abb1-fd36fc7132b0",
     "country":  "Viet Nam",
     "joinDate": "2021/12/01",
@@ -21,6 +22,24 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySW5mbyI6eyJ1c
     "totalBill": 3000
 }    
 
+
+### add a customer
+
+POST   http://localhost:8080/customers
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySW5mbyI6eyJ1c2VybmFtZSI6ImFkbWluIiwicm9sZXMiOlsyMDAxXX0sImlhdCI6MTY1NTkxMTUzMSwiZXhwIjoxNjU1OTExNTQxfQ.IkhdLD4NnlRMqSN1TGmTQxHROe13g6sIdGePw1dWa-I
+
+{
+    "customerID": 5,
+    "name": "Nirav Joshi 4",
+    "email": "nirav4@gmail.com",
+    "password": "11111111",
+    "imgProfile": "https://firebasestorage.googleapis.com/v0/b/minishop-b3604.appspot.com/o/avatar.jpg?alt=media&token=34804fd3-dcdf-4c38-abb1-fd36fc7132b0",
+    "country":  "Viet Nam",
+    "joinDate": "2021/12/01",
+    "lastAccessAt": "2021/12/01",
+    "totalBill": 3000
+}    
 
 ### delete a customer
 
