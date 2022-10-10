@@ -1,8 +1,8 @@
-### send otp 
+### send otp to email
 
-GET  http://localhost:8080/otpCustomer
+POST  http://localhost:8080/otpCustomer
 content-type: application/json
 
 {
-    "toEmail": "test1234@gmail.com",
+    "toEmail": "lngocan1996@gmail.com"
 }

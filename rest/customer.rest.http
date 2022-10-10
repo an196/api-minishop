@@ -61,7 +61,7 @@ content-type: application/json
 {
     "_id": "633ea26ba02acc69764a430a",
     "username": "Nirav Joshi 7",
-    "email": "test1234@gmail.com",
+    "email": "lngocan1996@gmail.com",
     "password": "$2a$12$05IJiM1vb5ujATkwJ21KqeaSg9i064FgbQIiWiDnMUjiipz08IgOy",
     "imgProfile": "https://firebasestorage.googleapis.com/v0/b/minishop-b3604.appspot.com/o/avatar.jpg?alt=media&token=34804fd3-dcdf-4c38-abb1-fd36fc7132b0",
     "country":  "Viet Nam",
