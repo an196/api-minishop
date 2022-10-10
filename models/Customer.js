@@ -55,6 +55,7 @@ const customerSchema = new Schema({
     emailOTP: String,
     phoneOTP: String,
     passwordOTP: String,
+    emailRechange: String,
 });
 
 module.exports = mongoose.model('Customer', customerSchema);

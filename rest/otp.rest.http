@@ -4,5 +4,18 @@ POST  http://localhost:8080/otpCustomer
 content-type: application/json
 
 {
+    "_id": "633ea26ba02acc69764a430a",
     "toEmail": "lngocan1996@gmail.com"
+}
+
+
+### send otp to compare
+
+POST  http://localhost:8080/otpCustomer/compare
+content-type: application/json
+
+{
+    "_id": "633ea26ba02acc69764a430a",
+    "email": "lngocan1996@gmail.com",
+    "otp" :  "471047"
 }
