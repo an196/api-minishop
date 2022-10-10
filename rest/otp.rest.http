@@ -1,0 +1,8 @@
+### send otp 
+
+GET  http://localhost:8080/otpCustomer
+content-type: application/json
+
+{
+    "toEmail": "test1234@gmail.com",
+}

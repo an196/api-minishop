@@ -16,7 +16,7 @@ const findProducts = async (req, res) => {
 
 const getProductsbyCategory = async (req, res) => {
     const category  = req?.params?.id;
-    console.log(category)
+    
     if (!category) return res.status(400).json({ message: 'Category ID required.' });
     const products = await Product.find({ category: Number(category)});
     if (!products) return res.status(204).json({ message: 'No Products found' });
@@ -61,6 +61,7 @@ const updateProduct = async (req, res) => {
     if (!product) {
         return res.status(204).json({ message: `No product matches ID ${req.params.id}.` });
     }
+    
     try {
         product.name = req.body?.name;
         product.image = req.body?.image;

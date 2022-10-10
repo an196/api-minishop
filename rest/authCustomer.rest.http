@@ -1,0 +1,20 @@
+### login
+
+POST  http://localhost:8080/authCustomer
+content-type: application/json
+
+{
+    "email": "test1234@gmail.com",
+    "password": "11111111"
+}
+
+###
+
+POST  http://localhost:8080/logout
+content-type: application/json
+set-cookie: jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJDdXN0b21lckluZm8iOnsidXNlcm5hbWUiOiJ0ZXN0MTIzNCJ9LCJpYXQiOjE2NjUwNTIwMTAsImV4cCI6MTY2NTA1MjYxMH0.CxXJioR-N2ZBl8ZQuVLy25O2cjNLOOKqMfk1RoJ9nSc
+
+{ 
+    "email": "test1234@gmail.com",
+    "password": "11111111"
+}

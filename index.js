@@ -39,6 +39,8 @@ app.use(cookieParser());
 // routes
 app.use('/register', require('./routes/register'));
 app.use('/auth', require('./routes/auth'));
+app.use('/otpCustomer', require('./routes/otpCustomer'));
+app.use('/authCustomer', require('./routes/authCustomer'));
 app.use('/refresh', require('./routes/refresh'));
 app.use('/logout', require('./routes/logout'));
 app.use('/employees', require('./routes/api/employees'));

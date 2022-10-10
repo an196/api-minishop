@@ -8,4 +8,7 @@ router.route('/')
     .get(customerController.getCustomers)
     .post(customerController.addCustomer)
     .delete(customerController.deleteCustomer)
+
+router.route('/:id')
+    .put(customerController.updateCustomer)
 module.exports = router;

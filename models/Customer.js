@@ -6,7 +6,7 @@ const customerSchema = new Schema({
         type: Number,
         required: true
     },
-    name: {
+    username: {
         type: String,
         required: true
     },
@@ -26,6 +26,18 @@ const customerSchema = new Schema({
         type: String,
         required: false
     },
+    birthday: {
+        type: Date,
+        required: false
+    },
+    phone: {
+        type: String,
+        required: false
+    },
+    gender: {
+        type: String,
+        required: false
+    },
     joinDate: {
         type: Date,
         required: false
@@ -38,7 +50,8 @@ const customerSchema = new Schema({
         type: Number,
         default: 0,
         required: false
-    }
+    },
+    refreshToken: [String]
 });
 
 module.exports = mongoose.model('Customer', customerSchema);
