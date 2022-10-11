@@ -52,10 +52,8 @@ const customerSchema = new Schema({
         required: false
     },
     refreshToken: [String],
-    emailOTP: String,
-    phoneOTP: String,
-    passwordOTP: String,
-    emailRechange: String,
+    OTP: String, //for email, phone, password
+    rechange: String, //for email, phone, password
 });
 
 module.exports = mongoose.model('Customer', customerSchema);

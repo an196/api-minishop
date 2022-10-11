@@ -5,17 +5,38 @@ content-type: application/json
 
 {
     "_id": "633ea26ba02acc69764a430a",
-    "toEmail": "lngocan1996@gmail.com"
+    "toEmail": "astro.nexg@gmail.com"
 }
 
 
-### send otp to compare
+### send otp to compare to change email
 
 POST  http://localhost:8080/otpCustomer/compare
 content-type: application/json
 
 {
     "_id": "633ea26ba02acc69764a430a",
-    "email": "lngocan1996@gmail.com",
-    "otp" :  "471047"
+    "email": "astro.nexg@gmail.com",
+    "otp" :  "067325"
+}
+
+### send otp to change password
+
+POST  http://localhost:8080/otpCustomer/password
+content-type: application/json
+
+{
+    "_id": "63451f6e20a4574c05311d6f",
+    "passwordRechange": "lngocan1996@gmail.com"
+}
+
+
+### send otp to compare to change password
+
+POST  http://localhost:8080/otpCustomer/comparePassword
+content-type: application/json
+
+{
+    "_id": "63451f6e20a4574c05311d6f",
+    "status": "OTP_TRUE"
 }

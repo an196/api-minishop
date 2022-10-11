@@ -7,8 +7,9 @@ const verifyRoles = require('../../middleware/verifyRoles');
 router.route('/')
     .get(customerController.getCustomers)
     .post(customerController.addCustomer)
-    .delete(customerController.deleteCustomer)
+    
 
 router.route('/:id')
     .put(customerController.updateCustomer)
+    .delete(customerController.deleteCustomer)
 module.exports = router;
