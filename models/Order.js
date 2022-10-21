@@ -10,15 +10,13 @@ const orderSchema = new Schema({
         type: String,
         required: true,
     },
+    customerName: {
+        type: String,
+        required: true
+    },
     details: {
-        goodsID: {
-            type: String,
-            required: true,
-        },
-        amount: {
-            type: Number,
-            default: 0,
-        },
+       type: [],
+       required: false,
     },
     totalAmount: {
         type: Number,
@@ -30,11 +28,15 @@ const orderSchema = new Schema({
     },
     deliveryAddress:{
         type: String,
-        required: true,
+        required: false,
     },
     status:{
         type: String,
         default: 'Pending',
+    },
+    date:{
+        type: Date,
+        default: new Date()
     }
 });
 

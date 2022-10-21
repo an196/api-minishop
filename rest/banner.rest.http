@@ -37,3 +37,36 @@ content-type: application/json
     "discount": "20% OFF",
     "saleTime": "Mon Jul 04 2022 15:08:32 GMT+0700"
 }
+
+### update a default banner v2
+
+PATCH    http://localhost:8080/banners/default/62cfca3b5a6ad4f36e4665e1
+content-type: application/json
+
+{
+    "buttonText": "Shop Now",
+    "desc": "Best headphone on the market",
+    "smallText": "Beats solo air",
+    "middleText": "Summer Sale",
+    "largeText1": "FINE",
+    "largeText2": "AMAZING",
+    "discount": "10% OFF",
+    "saleTime": "2022-07-04T08:08:32.000Z",
+    "image": "https://firebasestorage.googleapis.com/v0/b/minishop-b3604.appspot.com/o/banner%2Fbanner.webp?alt=media&token=680dab34-a734-4003-b038-5306a79e6961",
+    "__v": 0,
+    "_id": "63304572ba0a9de370f99b2b",
+    "item": {
+        "_id": "63302d04ba0a9de370f99aa9",
+        "goodsID": 1,
+        "image": [
+            "https://firebasestorage.googleapis.com/v0/b/minishop-b3604.appspot.com/o/product%2Fearphones_a_1.webp?alt=media&token=893171b1-7741-4c62-a51b-7aca2b71e665"
+        ],
+        "name": "Amazon Basics In-Ear Wired Headphones, Earbuds with Microphone, Black",
+        "price": "9",
+        "goodsReceipts": "2022-09-24T17:00:00.000Z",
+        "category": 2,
+        "amount": 10,
+        "__v": 0,
+        "details": "<h1 class=\"a-size-base-plus a-text-bold\" style=\"padding: 0px 0px 4px; margin-top: 0px; margin-bottom: 0px; text-rendering: optimizelegibility; color: rgb(15, 17, 17); font-family: &quot;Amazon Ember&quot;, Arial, sans-serif; font-weight: 700 !important; font-size: 16px !important; line-height: 24px !important;\">About this item</h1><ul class=\"a-unordered-list a-vertical a-spacing-mini\" style=\"margin-left: 18px; color: rgb(15, 17, 17); font-family: &quot;Amazon Ember&quot;, Arial, sans-serif;\"><li style=\"list-style: disc; overflow-wrap: break-word; margin: 0px;\"><span class=\"a-list-item\">IPX4 Sweat and Water Resistant</span></li><li style=\"list-style: disc; overflow-wrap: break-word; margin: 0px;\"><span class=\"a-list-item\">Noise-Isolating Fit,Microphone</span></li><li style=\"list-style: disc; overflow-wrap: break-word; margin: 0px;\"><span class=\"a-list-item\">Connection Types: Lightning connector</span></li><li style=\"list-style: disc; overflow-wrap: break-word; margin: 0px;\"><span class=\"a-list-item\">Call and Track Control</span></li><li style=\"list-style: disc; overflow-wrap: break-word; margin: 0px;\"><span class=\"a-list-item\">Connectivity technology: Wired</span></li></ul>"
+    }
+}

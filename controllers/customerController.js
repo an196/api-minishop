@@ -7,6 +7,32 @@ const getCustomers = async (req, res) => {
     res.json(customers);
 };
 
+const getCustomer = async (req, res) => {
+  
+    if(req.params?._id)
+        res.status(204).json({ message: '_id is required' });
+        console.log(req.params?.id)
+    const customers = await Customer.findOne({_id: req.params?.id}).exec();
+    if (!customers) return res.status(204).json({ message: 'No customers found' });
+    
+    const resCustomer = {
+        _id: customers?._id,
+        customerID:customers?.customerID,
+        username:customers?.username,
+        email:customers?.email,
+        imgProfile:customers?.imgProfile,
+        country:customers?.country,
+        joinDate:customers?.joinDate,
+        lastAccessAt:customers?.lastAccessAt,
+        totalBill:customers?.totalBill,
+        birthday:customers?.birthday,
+        gender:customers?.gender,
+        phone:customers?.phone,
+    }
+    res.json(resCustomer);
+};
+
+
 const addCustomer = async (req, res) => {
     const { username, password, email } = req.body;
     if (!username || !password || !email)
@@ -39,6 +65,7 @@ const addCustomer = async (req, res) => {
             joinDate: new Date(),
             lastAccessAt: new Date(),
             totalBill: 0,
+            address: req.body?.address || '',
         });
 
         res.status(201).json({ success: `New user ${username} created!` });
@@ -69,6 +96,7 @@ const updateCustomer = async (req, res) => {
         if(req.body?.gender) customer.gender = req.body?.gender;
         if(req.body?.birthday) customer.birthday = req.body?.birthday;
         if(req.body?.phone) customer.phone = req.body?.phone;
+        if(req.body?.address) customer.phone = req.body?.address;
 
         const result = await customer.save();
         res.status(200).json(result);
@@ -89,6 +117,7 @@ const deleteCustomer = async (req, res) => {
 
 module.exports = {
     getCustomers,
+    getCustomer,
     addCustomer,
     deleteCustomer,
     updateCustomer

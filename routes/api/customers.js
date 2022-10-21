@@ -11,5 +11,6 @@ router.route('/')
 
 router.route('/:id')
     .put(customerController.updateCustomer)
+    .get(customerController.getCustomer)
     .delete(customerController.deleteCustomer)
 module.exports = router;

@@ -6,6 +6,10 @@ const bannerSchema = new Schema({
         type: String,
         require: true,
     },
+    item: {
+        type: Object,
+        require: true,
+    },
     buttonText: {
         type: String,
         require: true,

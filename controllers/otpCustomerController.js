@@ -69,18 +69,18 @@ const handleSendOtpToChangePassword = async (req, res) => {
 
     const newOTP = generateOTP(6);
     const hashedPwd = await bcrypt.hash(req.body.passwordRechange, 10);
-    //sendOtpToEmail(customer.email, newOTP);
-    //res.status(200).json({ message: 'OTP has sent to email' });
-    console.log(customer)
+    sendOtpToEmail(customer.email, newOTP);
+    res.status(200).json({ message: 'OTP has sent to email' });
+
     try {
 
         customer.OTP = newOTP;
         customer.rechange = hashedPwd;
         const result = await customer.save();
         
-        res.status(200).json(newOTP);
+        //res.status(200).json(newOTP);
     } catch (error) {
-        res.status(500).json(error);
+        //res.status(500).json(error);
     }
 };
 

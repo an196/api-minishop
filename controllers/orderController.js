@@ -1,4 +1,5 @@
 const Order = require('../models/Order');
+const Customer = require('../models/Customer');
 
 const getOrders = async (req, res) => {
     const orders = await Order.find();
@@ -7,22 +8,32 @@ const getOrders = async (req, res) => {
 };
 
 const addOrder = async (req, res) => {
-    const newOrder = new Order(req.body);
+    //update totalBill of customer
+    const findCusomter = await Customer.findOne({customerID : 10}).exec();
+    if(!findCusomter)
+        return res.status(400).json({ message: 'Customer id is required.' });
+        console.log(req.body.totalPayment)
+
+    findCusomter.totalBill = Number(findCusomter.totalBill) + Number(req.body.totalPayment);
+
+    //save order customer
+    const newOrder = new Order({...req.body});
     try {
+        const saveCusomter = await findCusomter.save();
         const savedOrder = await newOrder.save();
-        res.status(200).json(savedOrder);
+       res.status(200).json(savedOrder);
     } catch (err) {
-        res.status(500).json(err);
+        return res.status(500).json(err);
     }
 };
 
 const deleteOrder = async (req, res) => {
    
-    if (!req?.body?.id) return res.status(400).json({ 'message': 'Order ID required.' });
+    if (!req?.body?._id) return res.status(400).json({ 'message': 'Order ID required.' });
 
-    const order = await Order.findOne({ _id: req.body.id }).exec();
+    const order = await Order.findOne({ _id: req.body._id }).exec();
     if (!order) {
-        return res.status(204).json({ "message": `No order matches ID ${req.body.id}.` });
+        return res.status(204).json({ "message": `No order matches ID ${req.body._id}.` });
     }
     const result = await order.deleteOne(); //{ _id: req.body.id }
     res.status(200).json(result);
@@ -31,14 +42,14 @@ const deleteOrder = async (req, res) => {
 
 const updateOrder = async (req, res) => {
     
-    if (!req?.params?.id) {
+    if (!req?.params?._id) {
        
         return res.status(400).json({ 'message': 'ID parameter is required.' });
     }
    
-    const order = await Order.findOne({ _id: req.params.id }).exec();
+    const order = await Order.findOne({ _id: req?.params?._id}).exec();
     if (!order) {
-        return res.status(204).json({ "message": `No order matches ID ${req.params.id}.` });
+        return res.status(204).json({ "message": `No order matches ID ${req?.params?._id}.` });
     }
 
    

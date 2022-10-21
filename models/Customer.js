@@ -30,6 +30,10 @@ const customerSchema = new Schema({
         type: Date,
         required: false
     },
+    address: {
+        type: String,
+        required: false
+    },
     phone: {
         type: String,
         required: false
