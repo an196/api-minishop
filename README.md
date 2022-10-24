@@ -10,6 +10,10 @@
 
 ## Framework
   - MVC
+  
+## Description
+  - This is api serve for minishop project  
+  
 ## Installation
 
 to install peer package
