@@ -56,7 +56,7 @@ npm run dev
 ## Features
 - Authentication for user.
 - Validation resgister form and login form.
-- Register account 
+- Register account.
 - Add multi-products into cart with number of each product
 - Remove product from cart
 - Checkout with stripe
@@ -65,5 +65,7 @@ npm run dev
 - Change avatar with image can crop
 - Change profile user 's personal infomation.
 - Persist login when refresh browser
+- Private route.
+- Sort product along newdest, oldest, price.
 - Responsive on multi-device. 
 
