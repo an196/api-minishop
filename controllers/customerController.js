@@ -11,7 +11,6 @@ const getCustomer = async (req, res) => {
   
     if(req.params?._id)
         res.status(204).json({ message: '_id is required' });
-        console.log(req.params?.id)
     const customers = await Customer.findOne({_id: req.params?.id}).exec();
     if (!customers) return res.status(204).json({ message: 'No customers found' });
     

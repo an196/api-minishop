@@ -42,13 +42,12 @@ const addProduct = async (req, res) => {
 
 const getProduct = async (req, res) => {
     if (!req?.params?.id) return res.status(400).json({ message: 'Product ID required' });
-    Product.findOne({ _id: req.params.id })
-        .exec()
-        .then(
-            (result) => res.status(200).json(result),
-            (err) => res.status(204).json({ message: `Product ID ${req.params.id} not found` }),
-        )
-        .catch((err) => res.status(204).json({ message: `Product ID ${req.params.id} not found` }));
+
+    const product = await Product.findOne({ _id: req.params.id }).exec();
+    if (!product) return res.status(204).json({ message: 'No product found' });
+    
+    res.json(product);
+       
 };
 
 const updateProduct = async (req, res) => {
