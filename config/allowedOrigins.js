@@ -3,7 +3,7 @@ const allowedOrigins = [
     'http://localhost:8080',
     'http://localhost:3000',
     'http://localhost:3001',
-    'https://symphonious-belekoy-88560f.netlify.app'
+    'ttps://voluble-mermaid-2aa403.netlify.app'
 ];
 
 module.exports = allowedOrigins;

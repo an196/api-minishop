@@ -69,7 +69,7 @@ content-type: application/json
     "_id": "63451f6e20a4574c05311d6f",
     "username": "lngocan1996",
     "email": "lngocan1996@gmail.com",
-    "totalBill": 122
+    "totalBill": 0
 }  
 
 ### update a customer with 
