@@ -66,6 +66,6 @@ npm run dev
 - Change profile user 's personal infomation.
 - Persist login when refresh browser
 - Private router.
-- Sort product along newdest, oldest, price.
-- Responsive on multi-device. 
+- Sort products along newdest, oldest, price.
+- Responsive on multi-devices. 
 
