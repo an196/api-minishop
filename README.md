@@ -24,7 +24,7 @@
     - Show banner with a product most sale.
     - Show infomation of each product.
     - List category.
-    - Show suggest product along category.
+    - Show suggest products along category.
     - Allow user register account.
     - Allow user manage their profile: avatar, usename, gender, birthday, country, email, password.
     - Authenticate when user checking out cart.
@@ -65,7 +65,7 @@ npm run dev
 - Change avatar with image can crop
 - Change profile user 's personal infomation.
 - Persist login when refresh browser
-- Private route.
+- Private router.
 - Sort product along newdest, oldest, price.
 - Responsive on multi-device. 
 
